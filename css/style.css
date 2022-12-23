@@ -11,7 +11,16 @@
 body {
 	background: var(--lightyellow);
 	font-size: clamp(2.33rem, calc(2.08rem + 1.25vw), 3.05rem);
+	color: var(--darkbrown);
 }
+p {
+	margin-top: 1em;
+}
+a,
+a:visited {
+	color: var(--darkgreen);
+}
+
 .player-tracker {
 	position: absolute;
 	top: 1em;
