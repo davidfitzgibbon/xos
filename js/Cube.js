@@ -39,8 +39,8 @@ export default class Cube extends ThreeasyComponent {
 		});
 		this.reset();
 
-		this.selected = Math.random() > 0.5 ? "O" : "X";
-		this.showSelected();
+		// this.selected = Math.random() > 0.5 ? "O" : "X";
+		// this.showSelected();
 	}
 	reset() {
 		this.selected = false;
