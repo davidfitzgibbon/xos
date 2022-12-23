@@ -3,14 +3,12 @@ lockfileVersion: 5.4
 specifiers:
   gsap: ^3.11.4
   three: ^0.137.5
-  three-extend-material: ^1.0.0
   threeasy: ^0.1.13
   vite: ^4.0.0
 
 dependencies:
   gsap: 3.11.4
   three: 0.137.5
-  three-extend-material: 1.0.0
   threeasy: 0.1.13
 
 devDependencies:
@@ -324,10 +322,6 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
     dev: true
-
-  /three-extend-material/1.0.0:
-    resolution: {integrity: sha512-mAAG8tyHG8UTVtiHcRfalqUWb2TSJ6Y7ZuudRFlkXcuLcNUcQ321BRa2cxtZ9Hb9M7XNyEiMY/wL/ItdZsfeHw==}
-    dev: false
 
   /three/0.137.5:
     resolution: {integrity: sha512-rTyr+HDFxjnN8+N/guZjDgfVxgHptZQpf6xfL/Mo7a5JYIFwK6tAq3bzxYYB4Ae0RosDZlDuP+X5aXDXz+XnHQ==}
