@@ -11,6 +11,6 @@
 		"threeasy": "^0.1.13"
 	},
 	"devDependencies": {
-		"vite": "^2.7.2"
+		"vite": "^4.0.0"
 	}
 }
