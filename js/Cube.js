@@ -69,9 +69,6 @@ export default class Cube extends ThreeasyComponent {
 		this.box = new app.THREE.Mesh(this.boxGeometry, this.materials.default);
 		this.group.add(this.box);
 
-		this.selectedGroup = new app.THREE.Group();
-		this.selectedGroup.position.z = 0.4;
-
 		this.O = new O(app, this.width);
 		this.X = new X(app, this.width);
 	}
@@ -115,6 +112,9 @@ export default class Cube extends ThreeasyComponent {
 	}
 
 	showSelected() {
+		this.selectedGroup = new app.THREE.Group();
+		this.selectedGroup.position.z = 0.4;
+
 		this.selectedGroup.scale.set(0, 0, 0);
 		if (this.selected == "O") {
 			this.selectedGroup.add(this.O);
@@ -124,8 +124,16 @@ export default class Cube extends ThreeasyComponent {
 		}
 		this.group.add(this.selectedGroup);
 
-		var tl = gsap.timeline({});
-		tl.to(this.group.rotation, { x: Math.PI * 2, duration: 1 });
+		var tl = gsap.timeline();
+		console.log(this.group.rotation.x);
+		tl.to(this.group.rotation, {
+			x: 0,
+			duration: 0,
+		});
+		tl.to(this.group.rotation, {
+			x: Math.PI * 2,
+			duration: 1,
+		});
 		tl.to(
 			this.selectedGroup.scale,
 			{ x: 1, y: 1, z: 1, duration: 1 },
