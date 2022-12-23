@@ -16,6 +16,7 @@ export default class Cube extends ThreeasyComponent {
 		this.group = new app.THREE.Group();
 		this.group.position.x = this.x;
 		this.group.position.y = this.y;
+		this.group.scale.set(0, 0, 0);
 		this.app.scene.add(this.group);
 
 		this.materials = {
@@ -31,12 +32,19 @@ export default class Cube extends ThreeasyComponent {
 
 		this.hoverTimeline = gsap.timeline({ repeat: -1, yoyo: true });
 		this.hoverTimeline.paused(true);
-		this.hoverTimeline.to(this.group.scale, {
-			x: 0.8,
-			y: 0.8,
-			duration: 0.5,
-			ease: "sine.inOut",
-		});
+		this.hoverTimeline.fromTo(
+			this.group.scale,
+			{
+				x: 1,
+				y: 1,
+			},
+			{
+				x: 0.8,
+				y: 0.8,
+				duration: 0.5,
+				ease: "sine.inOut",
+			}
+		);
 		this.reset();
 
 		// this.selected = Math.random() > 0.5 ? "O" : "X";
@@ -59,6 +67,7 @@ export default class Cube extends ThreeasyComponent {
 			this.group.remove(this.selectedGroup);
 			this.selectedGroup.remove();
 		}
+		this.resetHover();
 	}
 	makeBox() {
 		this.boxGeometry = new app.THREE.BoxGeometry(
