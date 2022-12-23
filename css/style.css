@@ -7,10 +7,10 @@
 }
 * {
 	font-family: sans-serif;
-	font-size: 4vw;
 }
 body {
 	background: var(--lightyellow);
+	font-size: 4vw;
 }
 .player-tracker {
 	position: absolute;
@@ -52,4 +52,12 @@ body {
 	margin-top: 0.5em;
 	padding: 0.25em 0.5em;
 	cursor: pointer;
+}
+.thanks {
+	font-size: 14px;
+	color: var(--darkbrown);
+	position: absolute;
+	bottom: 0.5em;
+	left: 50%;
+	translate: -50% 0;
 }
